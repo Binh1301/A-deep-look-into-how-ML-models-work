@@ -1,6 +1,6 @@
 import numpy as np
 import math
-x_train = np.array([1.0, 2.0])  # features
+x_train = np.array([1.0, 2.0])  
 y_train = np.array([300.0, 500.0])
 def compute_cost(x,y,w,b):
     m = x.shape[0]
@@ -41,10 +41,8 @@ def gradient_descent(x,y,w_in,b_in,alpha,num_iters, cost_func,gradient_func):
     return w,b,j_history, p_history
 w_init = 0
 b_init = 0
-# some gradient descent settings
 iterations = 10000
 tmp_alpha = 1.0e-2
-# run gradient descent
 w_final, b_final, J_hist, p_hist = gradient_descent(x_train ,y_train, w_init, b_init, tmp_alpha,
                                                     iterations, compute_cost, compute_gradient)
 print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
