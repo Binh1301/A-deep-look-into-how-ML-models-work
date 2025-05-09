@@ -1,6 +1,6 @@
 import numpy as np
 def compute_gradient_logistic_reg(X, y, w, b, lambda_):
-    m, n = X.shape  # (number of examples, number of features)
+    m, n = X.shape  
     dj_dw = np.zeros((n,))
     dj_db = 0.
     def sigmoid(z):
